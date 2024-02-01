@@ -1,0 +1,19 @@
+name: Transmisión en Bucle
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  ejecutar-script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout del Repositorio
+      uses: actions/checkout@v2
+
+    - name: Ejecutar Script Bash
+      run: |
+        chmod +x livestream.sh
+        ./livestream.sh
