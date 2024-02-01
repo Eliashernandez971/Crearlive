@@ -3,8 +3,7 @@
 YOUTUBE_URL="rtmp://a.rtmp.youtube.com/live2"
 KEY="tu-clave-de-transmision"
 
-VIDEO_SOURCE="ruta/al/tu/video.mkv"
-AUDIO_SOURCE="ruta/al/tu/audio.mp3"
+VIDEO_SOURCE="https://linear-351.frequency.stream/mt/studio/351/hls/master/playlist.m3u8"
 
 while true; do
     ffmpeg -re -i "$VIDEO_SOURCE" -i "$AUDIO_SOURCE" \
