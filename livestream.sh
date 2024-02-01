@@ -10,5 +10,5 @@ while true; do
     ffmpeg -re -i "$VIDEO_SOURCE" -i "$AUDIO_SOURCE" \
     -c:v libx264 -preset superfast -b:v 4500k \
     -c:a aac -b:a 128k \
-    -f flv "$YOUTUBE_URL/$KEY"
+    -f flv "$YOUTUBE_URL/$KEY" > log.txt 2>&1
 done
